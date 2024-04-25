@@ -6,6 +6,7 @@ a {
 }
 body {
   color: #222;
+  font-size: 16px;
 }
 img {
   max-width: 100%;
@@ -15,13 +16,24 @@ main {
   max-width: 960px;
   margin: 0 auto;
 }
+.main-content {
+  padding-top: 88px;
+}
 header {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  max-width: 960px;
   margin-bottom: 50px;
+  /* padding: 0 256px; */
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: auto;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
 }
+
 header a {
   text-decoration: none;
   color: inherit;
@@ -33,6 +45,8 @@ header a.logo {
 header nav {
   display: flex;
   gap: 24px;
+  align-items: center;
+  font-weight: bold;
 }
 
 div.post {
@@ -156,4 +170,75 @@ div.post-page a.edit-btn {
 }
 a svg {
   height: 20px;
+}
+
+.btn-login,
+.btn-register {
+  width: 96px;
+}
+
+.header-items {
+  width: 96px;
+  border-radius: 0;
+  color: #333;
+  margin-left: 8px;
+
+  .header-item {
+    cursor: pointer;
+    padding-left: -8px;
+    width: 100%;
+    height: 28px;
+    margin: 0;
+
+    &:hover {
+      background-color: rgba(22, 24, 35, 0.03);
+      padding-left: -8px;
+    }
+  }
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid rgba(22, 24, 35, 0.08); /* Màu và độ dày của đường kẻ ngang */
+}
+
+/* Space search */
+.Search {
+  width: 100%; /* Chiều rộng của container là 100% */
+  display: flex; /* Sử dụng Flexbox để căn giữa */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+}
+
+.centered-space,
+.ant-space-item {
+  flex: 1; /* Cho phép Space mở rộng đầy đủ theo chiều ngang */
+  max-width: 400px; /* Giới hạn chiều rộng tối đa của Space nếu cần */
+}
+
+/* Tùy chỉnh background-color cho nút chính */
+.ant-btn-primary {
+  background-color: rgba(85, 85, 85, 0.8); /* Màu nền */
+}
+
+/* Tùy chỉnh background-color và màu chữ khi hover hoặc active */
+.ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover,
+.ant-btn-primary:not(:disabled):not(.ant-btn-disabled):active {
+  background-color: rgba(85, 85, 85, 1); /* Màu nền */
+  color: #ffffff; /* Màu chữ */
+}
+
+/* Tùy chỉnh border khi focus vào nút */
+:where(.css-dev-only-do-not-override-mzwlov).ant-btn:not(:disabled):focus-visible {
+  outline: 4px solid rgba(85, 85, 85, 0.1); /* Đường viền */
+  outline-offset: 1px;
+  transition: outline-offset 0s, outline 0s;
+}
+
+/* Tùy chỉnh chiều dài cho ô input */
+.ant-input {
+  width: 300px; /* Đặt độ rộng của ô input là 200px */
+
+  &:hover {
+    border: node;
+  }
 }

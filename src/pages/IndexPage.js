@@ -10,7 +10,11 @@ const IndexPage = () => {
       });
     });
   }, []);
-  return <>{posts.length > 0 && posts.map((post) => <Post {...post} />)}</>;
+  return (
+    <div className='main-content'>
+      {posts.length > 0 && posts.map((post) => <Post {...post} />)}
+    </div>
+  );
 };
 
 export default IndexPage;

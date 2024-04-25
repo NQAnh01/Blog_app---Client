@@ -47,23 +47,25 @@ const EditPost = () => {
   }
 
   return (
-    <form onSubmit={updatePost}>
-      <input
-        type='title'
-        placeholder={'Title'}
-        value={title}
-        onChange={(ev) => setTitle(ev.target.value)}
-      />
-      <input
-        type='summary'
-        placeholder={'Summary'}
-        value={summary}
-        onChange={(ev) => setSummary(ev.target.value)}
-      />
-      <input type='file' onChange={(ev) => setFiles(ev.target.files)} />
-      <Editor value={content} onChange={setContent} />
-      <button style={{ marginTop: '5px' }}>Update post</button>
-    </form>
+    <div className='main-content'>
+      <form onSubmit={updatePost}>
+        <input
+          type='title'
+          placeholder={'Title'}
+          value={title}
+          onChange={(ev) => setTitle(ev.target.value)}
+        />
+        <input
+          type='summary'
+          placeholder={'Summary'}
+          value={summary}
+          onChange={(ev) => setSummary(ev.target.value)}
+        />
+        <input type='file' onChange={(ev) => setFiles(ev.target.files)} />
+        <Editor value={content} onChange={setContent} />
+        <button style={{ marginTop: '5px' }}>Update post</button>
+      </form>
+    </div>
   );
 };
 

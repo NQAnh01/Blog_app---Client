@@ -48,24 +48,26 @@ const CreatePost = () => {
   }
 
   return (
-    <form onSubmit={createNewPost}>
-      {error && <div>{error}</div>}
-      <input
-        type='title'
-        placeholder={'Title'}
-        value={title}
-        onChange={(ev) => setTitle(ev.target.value)}
-      />
-      <input
-        type='summary'
-        placeholder={'Summary'}
-        value={summary}
-        onChange={(ev) => setSummary(ev.target.value)}
-      />
-      <input type='file' onChange={(ev) => setFiles(ev.target.files)} />
-      <Editor value={content} onChange={setContent} />
-      <button style={{ marginTop: '5px' }}>Create post</button>
-    </form>
+    <div className='main-content'>
+      <form onSubmit={createNewPost}>
+        {error && <div>{error}</div>}
+        <input
+          type='title'
+          placeholder={'Title'}
+          value={title}
+          onChange={(ev) => setTitle(ev.target.value)}
+        />
+        <input
+          type='summary'
+          placeholder={'Summary'}
+          value={summary}
+          onChange={(ev) => setSummary(ev.target.value)}
+        />
+        <input type='file' onChange={(ev) => setFiles(ev.target.files)} />
+        <Editor value={content} onChange={setContent} />
+        <button style={{ marginTop: '5px' }}>Create post</button>
+      </form>
+    </div>
   );
 };
 
